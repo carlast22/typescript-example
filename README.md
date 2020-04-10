@@ -4,7 +4,7 @@
 
 Simple counter with Typescript, React, styled-components and ParcelJS
 
-## Execute local
-`npm start`
+[http://carlasuarez.xyz/typescript-example/](http://carlasuarez.xyz/typescript-example/)
 
-Check: `localhost:1234`
+## Run local
+`npm start`
