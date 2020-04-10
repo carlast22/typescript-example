@@ -1,16 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
 
-export const Item = styled.div`
-  display: flex;
-  justify-content: center;
-  padding: 5px;
+const Item = styled.div`
+  padding: 10px;
 `
 
-export const Grid = styled.div`
-  display: grid;
-  grid-template-rows: 50px 50px;
-  grid-gap: 5px;
+const Grid = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
 `
 
 interface Props {
@@ -29,23 +28,17 @@ const App: React.FunctionComponent<Props> = ({ initialNumber }) => {
   }
 
   return (
-    <>
-      <Grid>
-        <Item></Item>
-        <Item></Item>
-        <Item>
-          <button onClick={handleAddition}>+</button>
-        </Item>
-        <Item>
-          <div>{number}</div>
-        </Item>
-        <Item>
-          <button disabled={number === 0} onClick={handleSubtraction}>
-            -
-          </button>
-        </Item>
-      </Grid>
-    </>
+    <Grid>
+      <Item>
+        <button onClick={handleAddition}>+</button>
+      </Item>
+      <Item>{number}</Item>
+      <Item>
+        <button disabled={number === 0} onClick={handleSubtraction}>
+          -
+        </button>
+      </Item>
+    </Grid>
   )
 }
 
