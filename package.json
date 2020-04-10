@@ -6,7 +6,9 @@
   "scripts": {
     "start": "parcel serve index.html",
     "build": "parcel build index.html",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "pretty:format": "prettier --write '**/*.ts?(x)'",
+    "pretty:check": "prettier --check '**/*.ts?(x)'"
   },
   "keywords": [],
   "author": "Carla Suarez",
@@ -24,6 +26,11 @@
     "@types/styled-components": "^5.0.1",
     "chroma-js": "^2.1.0",
     "parcel-bundler": "^1.12.4",
+    "prettier": "^2.0.4",
     "typescript": "^3.8.3"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
   }
 }
