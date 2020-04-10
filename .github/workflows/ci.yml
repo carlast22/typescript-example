@@ -11,5 +11,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Run a one-line script
-      run: echo Hello, world!
+    - name: Install dependencies
+      run: npm ci
+    - name: Check types
+      run: npm run type:check
+    - name: Check prettier
+      run: npm run pretty:check
+    - name: Build
+      run: npm run build
+
