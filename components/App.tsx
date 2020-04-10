@@ -13,8 +13,12 @@ export const Grid = styled.div`
   grid-gap: 5px;
 `;
 
-const App: React.FunctionComponent = () => {    
-    const [number, setNumber] = React.useState(0)
+interface Props {
+    initialNumber: number
+}
+
+const App: React.FunctionComponent<Props> = ({initialNumber}) => {    
+    const [number, setNumber] = React.useState(initialNumber)
 
     function handleAddition() {
         setNumber(number + 1)
