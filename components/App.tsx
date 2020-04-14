@@ -1,11 +1,11 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 
-const Item = styled.div`
+const Item = styled('div')`
   padding: 10px;
 `
 
-const Grid = styled.div`
+const Grid = styled('div')`
   display: flex;
   flex-direction: column;
   align-items: center;
